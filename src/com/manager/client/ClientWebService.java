@@ -11,6 +11,7 @@ public class ClientWebService {
 		
 		String content = Request
 			.Post("http://localhost:8080/manager/companies")
+			.addHeader("Accept","application/xml")
 			.execute().returnContent()
 			.asString();
 		
